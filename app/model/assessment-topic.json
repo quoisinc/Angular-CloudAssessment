@@ -1,0 +1,31 @@
+{
+    "topic" : {
+    "id" : "1",
+        "questions": [
+        {
+            "num": 1,
+            "qn": "Which of these statements best describes how your organization restricts access by role?",
+            "option1": "Physical access is not managed by role and may use shared access methods.",
+            "option2": "Physical access is managed by role.",
+            "option3": "Physical access is managed by role and is centrally managed.",
+            "option4": "Physical access is managed by role and is centrally managed, logged, and audited."
+        },
+        {
+            "num": 2,
+            "qn": "Which of these statements best describes your employee change or termination process?",
+            "option1": "There is a generally accepted method for termination and reassignment, but there is no official procedure.",
+            "option2": "There is a written process that is generally followed to remove or change access for employees who leave or are reassigned within the organization.",
+            "option3": "There is a written process that includes management accountability for removing or changing access for employees who leave or are reassigned.",
+            "option4": "There is a written process that includes management and system owner accountability for removing or changing access for employees who leave or are reassigned."
+        },
+        {
+            "num": 3,
+            "qn": "Which of these statements best describes your organizationís physical security access method?",
+            "option1": "Access is typically controlled at the perimeter (for example, building entry), and after obtaining entry an individual has generally unrestricted access within the facility.",
+            "option2": "Access is controlled at the perimeter, and group keys are required for different general areas within the facility.",
+            "option3": "Access is controlled by policy that enforces individual assignment of unique keys.",
+            "option4": "Access is controlled by policy that requires unique keys, retention of logs, and regular audits."
+        }
+    ]
+ }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "app assessment",
+  "readiness": "Migrate",
+  "readinessScore": 35,
+  "readinessDetails": "The application is can be migrated to the cloud after assessing the architecture feasibility, platform feasibility and application complexity."
+}

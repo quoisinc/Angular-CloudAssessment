@@ -1,0 +1,203 @@
+{
+  "Response":
+  {
+    "grade": "A+",
+    "ref":"aplus",
+    "scale": [
+      {
+        "label": "Certificate",
+        "n": 100
+      },
+      {
+        "label": "Protocol Support",
+        "n": 95
+      },
+      {
+        "label": "Key Exchange",
+        "n": 80
+      },
+      {
+        "label": "Cipher Strength",
+        "n": 90
+      }
+    ],
+    "banner": [
+      {
+        "label": "This server supports TLS_FALLBACK_SCSV to prevent protocol downgrade attacks.",
+        "status": "normal"
+      },
+      {
+        "label": "This server supports HTTP Strict Transport Security with long duration. Grade set to A+.",
+        "status": "normal"
+      }
+    ],
+    "authentication": {
+      "label": "Authentication",
+      "keycert": {
+        "name": "Server Key and Certificate #1",
+        "info": [
+          { "attribute": "Common names", "value": “xx-xx.xxxxxxxxx.com" },
+          { "attribute": "Alternative names", "value": “xx-xx.xxxxxxxxx.com" },
+          { "attribute": "Prefix handling", "value": "Both (with and without WWW)" },
+          { "attribute": "Valid from", "value": "Sat Jan 31 11:23:00 PST 2015" },
+          { "attribute": "Valid until", "value": "Mon Feb 01 01:59:22 PST 2016 (expires in 10 months and 26 days)" },
+          { "attribute": "Key", "value": “xxx 2048 bits (e 65537)" },
+          { "attribute": "Weak key (Debian)", "value": "No" },
+          { "attribute": "Issuer", "value": “xxxxxClass 1 Primary Intermediate Server CA" },
+          { "attribute": "Signature algorithm", "value": “xxxxxhRSA" },
+          { "attribute": "Extended validation", "value": "No" },
+          { "attribute": "Revocation information", "value": "CRL, OCSP" },
+          { "attribute": "Revocation status", "value": "Good (not revoked)" },
+          { "attribute": "Trusted", "value": "Yes" }
+        ]
+      },
+      "additional": {
+        "name": "Additional Certificates (if supplied)",
+        "info": [
+          { "attribute": "Certificates provided", "value": "3 (5171 bytes)" },
+          { "attribute": "Chain issues", "value": "Contains anchor" }
+        ],
+        "certs": [
+          {
+            "name": "#2",
+            "info": [
+              { "attribute": "Subject", "value": “xxxxxx Intermediate Server CA\nFingerprint: xxxxxxxxxx” },
+              { "attribute": "Valid until", "value": "Tue Oct 24 13:54:17 PDT 2017 (expires in 2 years and 7 months)" },
+              { "attribute": "Key", "value": "RSA 2048 bits (e 65537)" },
+              { "attribute": "Issuer", "value": "StartCom Certification Authority" },
+              { "attribute": "Signature algorithm", "value": “xxxxhRSA" }
+            ]
+          },
+          {
+            "name": "#3",
+            "info": [
+              { "attribute": "Subject", "value": “xxxx Authority\nFingerprint: xxxxxxxxxxx” },
+              { "attribute": "Valid until", "value": "Wed Sep 17 12:46:36 PDT 2036 (expires in 21 years and 6 months)" },
+              { "attribute": "Key", "value": "RSA xxxxxx bits (e 65537)" },
+              { "attribute": "Issuer", "value": “xxxxx ion Authority\nSelf-signed" },
+              { "attribute": "Signature algorithm", "value": “xxxxxxx\nWeak, but no impact on root certificate" }
+            ]
+          }
+        ]
+      },
+      "certpaths": {
+        "name": "Certification Paths",
+        "paths": [
+          {
+            "name": "Path #1: Trusted",
+            "info": [
+              {
+                "id": 1,
+                "where": "Sent by server",
+                "fingerprint": “xx-xx.xxxxxxxxx.com\nFingerprint: 4xxxxxxxx\nRSA 2048 bits (e 65537) / SHA256withRSA"
+              },
+              {
+                "id": 2,
+                "where": "Sent by server",
+                "fingerprint": “xxxxx Class 1 Primary Intermediate Server CA\nFingerprint: xxxxxxxxx\nRSA 2048 bits (e 65537) / xxxxwithRSA"
+              },
+              {
+                "id": 3,
+                "where": "Sent by server",
+                "fingerprint": “xxxxx Certification Authority\nFingerprint: xxxxxxxxxx0\nRSA 4096 bits (e 65537) / XXXthRSA\nWeak or insecure signature, but no impact on root certificate"
+              }
+            ]
+          },
+          {
+            "name": "Path #2: Trusted",
+            "info": [
+              {
+                "id": 1,
+                "where": "Sent by server",
+                "fingerprint": “xx-xx.xxxxxxxxx.com\nFingerprint: xxxxxxxxxx\nRSA 2048 bits (e 65537) / xxxxxRSA"
+              },
+              {
+                "id": 2,
+                "where": "Sent by server",
+                "fingerprint": “xxxx Class 1 Primary Intermediate Server CA\nFingerprint: xxxxxxxxxxx\nRSA 2048 bits (e 65537) / xxxxxxxthRSA"
+              },
+              {
+                "id": 3,
+                "where": "Sent by server",
+                "fingerprint": “xxxxxx Authority\nFingerprint: xxxxxxxx\nxxxxxxx bits (e 65537) / xxxxxxRSA\nWeak or insecure signature, but no impact on root certificate"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "configuration": {
+      "label": "Configuration",
+      "protocols": {
+        "label": "Protocols",
+        "info": [
+          { "attribute": "TLS 1.2", "value": "Yes" },
+          { "attribute": "TLS 1.1", "value": "Yes" },
+          { "attribute": "TLS 1.0", "value": "Yes" },
+          { "attribute": "SSL 3", "value": "No" },
+          { "attribute": "SSL 2", "value": "No" }
+        ]
+      },
+      "ciphers": {
+        "label": "Cipher Suites (SSL 3+ suites in server-preferred order; deprecated and SSL 2 suites always at the end)",
+        "info": [
+          { "attribute": "TLS_XXX_XXX _SHA256    ECDH 256 bits (eq. 3072 bits RSA)   FS", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA256    ECDH 256 bits (eq. 3072 bits RSA)   FS", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA   ECDH 256 bits (eq. 3072 bits RSA)   FS", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA384   ECDH 256 bits (eq. 3072 bits RSA)   FS", "value": "256" },
+          { "attribute": "TLS_XXX_XXX _SHA384    ECDH 256 bits (eq. 3072 bits RSA)   FS", "value": "256" },
+          { "attribute": "TLS_XXX_XXX _SHA   ECDH 256 bits (eq. 3072 bits RSA)   FS", "value": "256" },
+          { "attribute": "TLS_XXX_XXX _SHA384   DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "256" },
+          { "attribute": "TLS_XXX_XXX _SHA256   DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "256" },
+          { "attribute": "TLS_XXX_XXX _CBC_SHA   DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "256" },
+          { "attribute": "TLS_XXX_XXX _128_GCM_SHA256   DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA256   DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA    DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "128" },
+          { "attribute": "TLS_XXX_XXX (0x9c)", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA256 ", "value": "128" },
+          { "attribute": "TLS_XXX_XXX _SHA ", "value": "128" },
+          { "attribute": "TTLS_XXX_XXX _SHA   DH 1024 bits (p: 128, g: 1, Ys: 128)   FS", "value": "112" },
+          { "attribute": "TTLS_XXX_XXX _SHA ", "value": "112" }
+        ]
+      },
+      "details": {
+        "label": "Protocol Details",
+        "info": [
+          { "attribute": "Secure Renegotiation", "value": "Supported" },
+          { "attribute": "Secure Client-Initiated Renegotiation", "value": "No" },
+          { "attribute": "Insecure Client-Initiated Renegotiation", "value": "No" },
+          { "attribute": "BEAST attack", "value": "Not mitigated server-side" },
+          { "attribute": "POODLE (SSLv3)", "value": "No, SSL 3 not supported" },
+          { "attribute": "POODLE (TLS)", "value": "No" },
+          { "attribute": "Downgrade attack prevention", "value": "Yes, TLS_FALLBACK_SCSV supported" },
+          { "attribute": "TLS compression", "value": "No" },
+          { "attribute": "RC4", "value": "No" },
+          { "attribute": "Heartbeat (extension)", "value": "Yes" },
+          { "attribute": "Heartbleed (vulnerability)", "value": "No" },
+          { "attribute": "OpenSSL CCS vuln. (xxx-0224)", "value": "No" },
+          { "attribute": "Forward Secrecy", "value": "Yes (with most browsers)   ROBUST" },
+          { "attribute": "Next Protocol Negotiation (NPN)", "value": "Yes   xxx3.1 http/1.1" },
+          { "attribute": "Session resumption (caching)", "value": "Yes" },
+          { "attribute": "Session resumption (tickets)", "value": "Yes" },
+          { "attribute": "OCSP stapling", "value": "Yes" },
+          { "attribute": "Strict Transport Security (HSTS)", "value": "Yes   max-age=31536000; includeSubDomains;" },
+          { "attribute": "Public Key Pinning (HPKP)", "value": "No" },
+          { "attribute": "Long handshake intolerance", "value": "No" },
+          { "attribute": "TLS extension intolerance", "value": "No" },
+          { "attribute": "TLS version intolerance", "value": "TLS 2.98" },
+          { "attribute": "SSL 2 handshake compatibility", "value": "Yes" }
+        ]
+      },
+      "misc": {
+        "label": "Miscellaneous",
+        "info": [
+          { "attribute": "Test date", "value": "Thu Mar 05 21:27:34 PST 2015" },
+          { "attribute": "Test duration", "value": “000.00 seconds" },
+          { "attribute": "HTTP status code", "value": "200" },
+          { "attribute": "HTTP server signature", "value": "Nginx" },
+          { "attribute": "Server hostname", "value": “xx-xx.xxxxxxorp.com" }
+        ]
+      }
+    }
+  }
+}

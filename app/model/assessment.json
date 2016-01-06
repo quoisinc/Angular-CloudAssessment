@@ -1,0 +1,21 @@
+{
+    "assessment" : {
+        "id": "1001",
+        "subject": "Cloud Maturity Assessment",
+        "topics": [
+            { "id": 1, "topic": "Physical Architecture" },
+            { "id": 2, "topic": "Privacy Management" },
+            { "id": 3, "topic": "Risk Management" },
+            { "id": 4, "topic": "Resilience Management" },
+            { "id": 5, "topic": "Security Architecture" }
+        ],
+        "levels": [
+            { "level": "Getting Started" },
+            { "level": "Making Progress" },
+            { "level": "Almost There" },
+            { "level": "Streamlined Effort" }
+        ]
+    }
+}
+
+

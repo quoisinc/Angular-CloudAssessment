@@ -1,0 +1,410 @@
+<form id="turboForm" name="turboform" novalidate>
+    <div class="turbo-wrap">
+        <!--Turbo Header-->
+        <div class="hdr clearfix">
+            <!--Cloud-->
+            <div class="logo-wrap">
+                <img src="assets/images/cl_icon2.png"  alt="UST Cloud Service" /> UST Cloud Services
+            </div>
+
+            <!--Drop down-->
+            <div class="user-wrap">
+               
+                <!-- NEW SELECT-->
+                <div class="btn-group bootstrap-select">
+                    <button id="newuser-login" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Username" aria-expanded="false">
+                           <span class="filter-option pull-left">
+                               <i class="glyphicon glyphicon-user select-blue"></i>&nbsp;{{userFullName}}
+                           </span>&nbsp;
+                        <span class="caret"></span>
+                    </button>
+
+                    <div class="dropdown-menu open" style="max-height: 815px; overflow: hidden; min-height: 0px;">
+                        <ul class="dropdown-menu inner" role="menu" style="max-height: 803px; overflow-y: auto; min-height: 0px;">
+
+                            <li data-original-index="0" class="selected">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;{{userFullName}}</span>
+                                    <span class="glyphicon glyphicon-user pull-left"></span>
+                                </a>
+                            </li>
+
+                            <li data-original-index="1">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;Settings</span>
+                                    <span class="glyphicon glyphicon-cog pull-left"></span>
+                                </a>
+                            </li>
+
+                            <li data-original-index="2">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;Logout</span>
+                                    <span class="glyphicon glyphicon-log-out pull-left"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END SELECT-->
+
+            </div>
+        </div>
+
+        <!--Sub Menu-->
+        <div class="sub-menu">
+
+            <ul class="assessment-nav" style="list-style-type: none">
+                <li class="navItem">
+                    <div class="clearfix">
+                        <div class="turbo left">
+                            <span class="affixer"><img src="assets/images/cldT_on.png" /></span>
+                            <span>Turbo DevOps</span>
+                        </div>
+                        <div class="img right"><img src="assets/images/menu_arrwD.png" /></div>
+
+                    </div>
+                    <!--submenu-->
+                    <ul class="subNav">
+                        <li>
+                            <!--Assessment Off-->
+                            <div class="assessmentdash" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidM_off.png" /> </span>
+                                <span>Cloud Maturity Assessment</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!--Cyber Defense off-->
+                            <div class="security" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidS_off.png" /></span>
+                                <span>Cyber Defense</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!--Cloud Operations Off-->
+                            <div class="operations" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidO_off.png" /></span>
+                                <span>Cloud Operations</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="turbo-title">Turbo DevOps</div>
+
+        <!-- Turbo DevOps Wrap -->
+        <div class="turbo-wrap">
+            <ul id="turboUl">
+
+                <!-- APPLICATION BLUEPRINTS-->
+                <li>
+                    <div class="clearfix accordion-wrap"  >
+                        <!--First Div-->
+                        <div class="left first">
+                            <!--img-->
+                            <div class="img left blueprint">&nbsp;</div>
+                            <div class="blurb left">
+                                <p class="title">Application Blueprints</p>
+                                <p>List of Application Blueprints for provisioning multi-tiered Application Instances. Application Blueprints have details about the Compute Instance templates to be used for provisioning and how they are interconnected.</p>
+                            </div>
+                        </div>
+
+                        <!--right div-->
+                        <div class="right">
+                            <!--img-->
+                            <div class="img right blueprint-last" ng-click="toggleAccordion($event)">&nbsp;</div>
+                        </div>
+
+                    </div>
+
+                    <!--Blueprint Accordion content-->
+                    <div class="content-accordion" style="display: none">
+                        <ul style="list-style-type: none;padding:0">
+
+                            <li ng-repeat="item in turboInstances" >
+                                <div class="clearfix accordion-sub-wrap" style="padding:16px 40px;background-color:#f1f1f2;margin-bottom:10px">
+                                    <!--img-->
+                                    <div class="img left cart" style="width:58px;height:60px;"><img src="../assets/images/{{item.icon}}" /></div>
+
+                                    <!--Title-->
+                                    <div class="txt left" style="margin:0 23px 0 34px;font-size:20px;color:#3077a0;padding-top:15px;min-width:130px">{{item.name}}</div>
+
+                                    <!--Toggle Image-->
+                                    <div  ng-click="toggleInstances($event)" class="img left toggle-click">&nbsp;</div>
+
+                                </div>
+
+                                <!--Blueprint tab content-->
+                                <div class="content clearfix tab-wrap" style="display: none">
+                                    <ul id="tabs{{$index}}" class="nav nav-tabs tabsUl" data-tabs="tabs">
+                                        <li class="active"><a href="#view-details{{$index}}" data-toggle="tab" class="viewdetails">View Details</a></li>
+                                        <li><a href="#provisions{{$index}}" data-toggle="tab" class="provisions-tab">Provision</a></li>
+                                    </ul>
+                                    <div id="my-tab-content{{$index}}" class="tab-content clearfix">
+                                        <!-- Details Area-->
+                                        <div class="tab-pane active" id="view-details{{$index}}">
+                                            <div class="clearfix">
+
+                                                <!--Blueprint version-->
+                                                <div>{{item.name}}<br/>
+                                                    <span class="version">{{item.version}}</span>
+                                                </div>
+
+                                                <!--Left region-->
+                                                <div class="col-xs-6 pad-left-0">
+                                                    <div>Tiers</div>
+                                                    <ul class="tiersUl">
+                                                        <!--Angular repeat tiers-->
+                                                        <li ng-repeat="details in item.tiers">
+                                                            <div class="clearfix">
+                                                                <div class="left">{{details.name}}</div>
+                                                                <div class="left pad-left-5" >{{details.virtualMachineImages[0].name}} </div>
+                                                                <div class="right">
+                                                                    <button class="btn btn-primary" data-name="{{item.name}}" data-index="{{$index}}" ng-click="showDescription($event)" >More Info</button>
+                                                                </div>
+                                                            </div>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                                <!--Right region-->
+                                                <div class="col-xs-5 claerfix">
+                                                    <!-- Info Box-->
+                                                    <div class="info-box" style="border:1px solid #d7d7d7;padding:8px">
+                                                        <div>{{item.description}}</div><br/>
+                                                        <div ng-repeat="details in item.tiers" id="description{{$index}}" class="description{{$index}} {{item.name}}{{$index}}">
+                                                            <div><strong>Name: </strong>{{details.virtualMachineImages[0].name}}</div><br/>
+                                                            <div><strong>Description: </strong>{{item.description}}</div><br/>
+                                                            <div><strong>Operating System: </strong>{{details.virtualMachineImages[0].os}}</div><br/>
+                                                            <div><strong>Source: </strong>{{details.virtualMachineImages[0].source}}</div><br/>
+                                                            <div><strong>Size: </strong>{{details.virtualMachineImages[0].size}}</div><br/>
+                                                            <div><strong>Ports Used: </strong>{{details.virtualMachineImages[0].portsUsed[$index].port}}</div><br/>
+
+                                                        </div><br/>
+
+                                                    </div>
+                                                </div>
+
+                                                <!--Connection Region -->
+                                                <div class="col-xs-12">
+                                                    Connections
+                                                    <!--   <div>Web Tier -> Application Tier</div>-->
+                                                    <div ng-repeat="detail in item.connections">{{detail}}</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--Provisions Area-->
+                                        <div class="tab-pane" id="provisions{{$index}}">
+                                            <div class="col-xs-4 turbo-submitWrap">
+                                                <form class="form-horizontal provisionForm">
+                                                    <div class="control-group">
+                                                        <div class="controls form-inline">
+                                                            <label for="Name">Application Instance Name</label>
+                                                            <input type="text" class="form-control txt" id="name{{$index}}" value="{{item.name}}"  placeholder="Application Name" required pattern="^((?!_)[A-Za-z0-9-])+$">
+                                                        </div>
+
+                                                        <div class="controls form-inline">
+                                                            <label for="Description">Description</label>
+                                                            <textarea  class="form-control txt" id="provision-description{{$index}}" value="{{item.name}}" cols="24" required>{{item.description}}</textarea>
+                                                        </div>
+
+                                                        <div class="controls form-inline">
+                                                            <label for="Environment">Deployment</label>
+                                                            <select class="form-control sel-deployment txt" id="select{{$index}}">
+                                                                <option value="Development" selected>Development</option>
+                                                                <option value="Testing" selected>Testing</option>
+                                                                <option value="Staging">Staging</option>
+                                                                <option value="Production">Production</option>
+                                                            </select>
+                                                        </div>
+                                                        <br/>
+                                                        <div class="form-group clearfix col-xs-8">
+                                                            <submit class="btn btn-primary right" data-id="{{item.id}}" ng-click="createBlueprintInstance($event)" data-description="{{item.description}}" data-originalAppName="{{item.name}}">Provision</submit>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!--APPLICATION INSTANCES-->
+                <li>
+                    <div class="clearfix accordion-wrap"  >
+                        <!--First Div-->
+                        <div class="left first">
+                            <!--img-->
+                            <div class="img left instances">&nbsp;</div>
+                            <div class="blurb left">
+                                <p class="title">Application Instances</p>
+                                <p>List of Application Instances provisioned using Application Blueprints. An Application Instance may consist of multiple tiers, with each tier consisting of one or more Compute Instances.</p>
+                            </div>
+                        </div>
+
+                        <!--right div-->
+                        <div class="right">
+                            <!--img-->
+                            <div class="img right instances-last" ng-click="toggleAccordion($event)">&nbsp;</div>
+                        </div>
+                    </div>
+
+                    <!--Application Accordion content-->
+                    <div class="content-accordion" style="display: none">
+                        <ul style="list-style-type: none;padding:0">
+
+                            <li ng-repeat="appitem in allturboInstances" >
+                                <div class="clearfix accordion-sub-wrap" style="padding:16px 40px;margin-bottom:10px;background-color:#f1f1f2">
+                                    <!--img-->
+                                    <div class="img left cart" style="width:58px;height:60px;"><img src="../assets/images/{{appitem.icon}}" /></div>
+
+                                    <!--Title-->
+                                    <div class="txt left" style="margin:0 23px 0 34px;font-size:20px;color:#3077a0;padding-top:15px;min-width:130px">{{appitem.name}}</div>
+
+                                    <!--Toggle Image-->
+                                    <div ng-click="toggleInstances($event)" class="img left toggle-click">&nbsp;</div>
+
+                                </div>
+
+                                <!--Application tab content-->
+                                <div class="content clearfix tab-wrap application"  style="display: none">
+                                    <ul id="apptabs{{$index}}" class="nav nav-tabs tabsUl" data-tabs="tabs">
+                                        <li class="active"><a href="#appview-details{{$index}}" data-toggle="tab" class="app-viewdetails">View Details</a></li>
+                                        <li><a href="#appprovisions{{$index}}" class="appprovisions-tab" data-toggle="tab">Actions</a></li>
+                                    </ul>
+                                    <div id="appmy-tab-content{{$index}}" class="tab-content clearfix">
+                                        <!-- Details Area-->
+                                        <div class="tab-pane active" id="appview-details{{$index}}">
+                                            <div class="clearfix">
+
+                                                <!--Application version-->
+                                                <div>{{appitem.name}}<br/>
+                                                    <span class="version">{{appitem.version}}</span>
+                                                    <span class="appurl"><a href="{{appitem.url}}" target="_blank">{{appitem.url}}</a></span>
+                                                </div>
+
+                                                <!--Left region-->
+                                                <div class="col-xs-6 pad-left-0">
+                                                    <div>Tiers</div>
+                                                    <ul class="tiersUl">
+                                                        <!--Angular repeat tiers-->
+                                                        <li ng-repeat="appdetails in appitem.tiers">
+                                                            <div class="clearfix">
+                                                                <div class="left">{{appdetails.name}}</div>
+                                                                <div class="left pad-left-5" >{{appdetails.virtualMachines[0].name}}</div>
+                                                                <div class="right">
+                                                                    <button class="btn btn-primary" data-name="{{appitem.name}}" data-index="{{$index}}" ng-click="showDescription($event)" >More Info</button>
+                                                                </div>
+                                                            </div>
+
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+
+                                                <!--Right region-->
+                                                <div class="col-xs-5 clearfix">
+                                                    <!-- Info Box-->
+                                                    <div class="info-box">
+                                                       <div>{{appitem.description}}</div><br/>
+                                                        <div ng-repeat="appdetails in appitem.tiers" id="appdescription{{$index}}" class="{{appitem.name}}{{$index}}">
+                                                            <div><strong>Name: </strong>{{appdetails.virtualMachines[0].name}}</div><br/>
+                                                            <div><strong>Hosted Service Name: </strong>{{appdetails.virtualMachines[0].hostedServiceName}}</div><br/>
+                                                            <div><strong>DNS Name: </strong>{{appdetails.virtualMachines[0].dnsName}}</div><br/>
+                                                            <div><strong>Source: </strong>{{appdetails.virtualMachines[0].source}}</div><br/>
+                                                            <div><strong>Operating System: </strong>{{appdetails.virtualMachines[0].os}}</div><br/>
+                                                            <div><strong>Media Link: </strong>{{appdetails.virtualMachines[0].mediaLink}}</div><br/>
+                                                            <div><strong>Size: </strong>{{appdetails.virtualMachines[0].size}}</div><br/>
+                                                        </div><br/>
+
+                                                    </div>
+                                                </div>
+
+                                                <!--Connection Region -->
+                                                <div class="col-xs-12">
+                                                    Connections
+                                                    <!--   <div>Web Tier -> Application Tier</div>-->
+                                                    <div ng-repeat="detail in item.allconnections">{{detail}}</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!--APP Provisions Area-->
+                                        <div class="tab-pane clearfix" id="appprovisions{{$index}}">
+                                            <div class="col-xs-4 text-center">
+                                                <form class="appprovisionForm">
+                                                    <div class="form-group clearfix">
+                                                        <label for="start">Start:</label>
+                                                        <button class="btn green" data-name="{{item.name}}" data-id="{{item.id}}" data-status="start" ng-click="runTurboOps($event)">Start</button>
+                                                    </div>
+                                                    <br/>
+                                                    <div class="form-group clearfix">
+                                                        <label for="stop">Stop:</label>
+                                                        <button class=" stop btn red" data-name="{{item.name}}" data-id="{{item.id}}" data-status="stop" ng-click="runTurboOps($event)">Stop</button>
+                                                    </div>
+                                                    <br/>
+                                                    <div class="form-group clearfix">
+                                                        <label for="de-provision">De-Provision:</label>
+                                                        <button class="deprovision btn red" data-name="{{item.name}}" data-id="{{item.id}}" data-status="deprovision" ng-click="runTurboOps($event)">De-Provision</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!--COMPUTE INSTANCES-->
+                <li>
+                    <div class="clearfix accordion-wrap"  >
+                        <!--First Div-->
+                        <div class="left first">
+                            <!--img-->
+                            <div class="img left compute">&nbsp;</div>
+                            <div class="blurb left">
+                                <p class="title">Compute Instances</p>
+                                <p>List of Compute Instances which are part of Application Instances. A Compute Instance is a virtual machine that provides the required computing resources (CPU, memory, storage and networking) for the Applications.</p>
+
+
+                            </div>
+                        </div>
+                        <!--right div-->
+                        <div class="right">
+                            <!--img-->
+                            <div class="img right compute-last">&nbsp;</div>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-crumbs" class="clearfix">
+        <div class="txt">&copy; 2015 UST Global</div>
+    </div>
+</form>
+

@@ -1,0 +1,59 @@
+{
+  "Response": [
+    {
+      "id": 1,
+      "name": "Shopping Cart",
+      "description": "Shopping Cart application blueprint",
+      "icon": "../../assets/images/cart.png",
+      "version": "1.2",
+      "numberOfTiers": 3,
+      "tiers": [
+        {
+          "name": "Web Tier",
+          "virtualMachineImages": [
+            {
+              "name": "Tomcat-Ubuntu-14.04",
+              "description": "Tomcat on Ubuntu 14.04 LTS (64-bit)",
+              "os": "Ubuntu 14.04 TLS",
+              "createdOn": "2015-02-11T07:15:31.42558Z",
+              "source": "https://xxxxx/Tomcat-Ubuntu-xx.xx.vhd",
+              "vhd": "Tomcat-Ubuntu-xx.xx.vhd",
+              "portsUsed": “xxxx,7101;22,AUTO"
+            }
+          ]
+        },
+        {
+          "name": "Application Tier",
+          "virtualMachineImages": [
+            {
+              "name": "App-Ubuntu-14.04",
+              "description": "Application on Ubuntu 14.04 LTS (64-bit)",
+              "os": "Ubuntu 14.04 TLS",
+              "createdOn": "2015-02-11T07:15:31.42558Z",
+              "source": "https://xxxxx/Tomcat-Ubuntu-xx.xx.vhd",
+              "vhd": "App-Ubuntu-14.04.vhd",
+              "portsUsed": “xxxx,1521;22,AUTO"
+            }
+          ]
+        },
+        {
+          "name": "Database Tier",
+          "virtualMachineImages": [
+            {
+              "name": "Oracle-RedHat-6.6",
+              "description": "Oracle 12cR1 on RedHat 6.6 (64-bit)",
+              "os": "RedHat 6.6",
+              "createdOn": "2015-02-11T07:15:31.42558Z",
+              "source": "https://xxxxx/Tomcat-Ubuntu-xx.xx.vhd",
+              "vhd": "Oracle-RedHat-6.6.vhd",
+              "portsUsed": “xxxx,1521;22,AUTO"
+            }
+          ]
+        }
+      ],
+      "connections": [
+        "Web Tier -> Application Tier", "Application Tier -> Database Tier"
+      ]
+    }
+  ]
+}

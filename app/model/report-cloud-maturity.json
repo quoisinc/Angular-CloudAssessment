@@ -1,0 +1,17 @@
+{
+  "type": "cloud maturity",
+  "bi": "Repeatable",
+  "biScore": 35,
+  "biDetails": "Processes have developed to the stage where similar procedures are followed by different people undertaking the same task. There is no formal training or communication of standard procedures, and responsibility is left to the individual. There is a high degree of reliance on the knowledge of individuals and, therefore, errors are likely.",
+  "radar": [
+    {
+      "className": "Cloud Maturity Index",
+      "axes": [
+        { "axis": "Governance", "value": 3 },
+        { "axis": "Technology", "value": 2 },
+        { "axis": "People", "value": 1 },
+        { "axis": "Business", "value": 5 }
+      ]
+    }
+  ]
+}

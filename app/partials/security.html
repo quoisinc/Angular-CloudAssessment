@@ -1,0 +1,459 @@
+<form id="securityForm">
+    <div class="security-wrap">
+        <!--Security Header-->
+        <div class="hdr clearfix">
+            <!--Cloud-->
+            <div class="logo-wrap">
+                <img src="assets/images/cl_icon2.png"  alt="UST Cloud Service" /> UST Cloud Services
+            </div>
+
+            <!--Drop down-->
+            <div class="user-wrap">
+                <!-- NEW SELECT-->
+                <div class="btn-group bootstrap-select">
+                    <button id="newuser-login" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Username" aria-expanded="false">
+                           <span class="filter-option pull-left">
+                               <i class="glyphicon glyphicon-user select-blue"></i>&nbsp;{{userFullName}}
+                           </span>&nbsp;
+                        <span class="caret"></span>
+                    </button>
+
+                    <div class="dropdown-menu open" style="max-height: 815px; overflow: hidden; min-height: 0px;">
+                        <ul class="dropdown-menu inner" role="menu" style="max-height: 803px; overflow-y: auto; min-height: 0px;">
+
+                            <li data-original-index="0" class="selected">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;{{userFullName}}</span>
+                                    <span class="glyphicon glyphicon-user pull-left"></span>
+                                </a>
+                            </li>
+
+                            <li data-original-index="1">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;Settings</span>
+                                    <span class="glyphicon glyphicon-cog pull-left"></span>
+                                </a>
+                            </li>
+
+                            <li data-original-index="2">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;Logout</span>
+                                    <span class="glyphicon glyphicon-log-out pull-left"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END SELECT-->
+
+            </div>
+        </div>
+
+        <!--Sub Menu-->
+        <div class="sub-menu">
+            <ul class="ust-nav" style="list-style-type: none">
+                <li class="navItem">
+                    <div class="clearfix">
+                        <div class="security left">
+                            <span class="affixer"><img src="assets/images/cidS_on.png" /></span>
+                            <span>Cyber Defense</span>
+                        </div>
+                        <div class="img right"><img src="assets/images/menu_arrwD.png" /></div>
+                    </div>
+
+                    <!--submenu-->
+                    <ul class="subNav">
+                        <li>
+                            <!--Assessment-off-->
+                            <div class="assessmentdash" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidM_off.png" /> </span>
+                                <span>Cloud Maturity Assessment</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!--Turbo Dev-->
+                            <div class="turbo" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cldT_off.png" /></span>
+                                <span>Turbo DevOps</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!--Cloud Operations Off-->
+                            <div class="operations" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidO_off.png" /></span>
+                                <span>Cloud Operations</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Title -->
+        <div class="security-title">Cyber Defense</div>
+
+        <!-- SECURITY SECTION -->
+        <div class="security-wrap">
+
+            <div class="content clearfix" style="display:block !important;">
+                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                    <li class="active"><a href="#cloud-provider" data-toggle="tab">Cloud Provider Security</a></li>
+                    <li><a href="#operating-system" data-toggle="tab">Operating System Security</a></li>
+                    <li><a href="#ssl-security"  data-toggle="tab">Service Security (SSL)</a></li>
+                </ul>
+                <div id="my-tab-content" class="tab-content">
+
+                    <!--CLOUD PROVIDER-->
+                    <div class="tab-pane active clearfix" id="cloud-provider">
+
+                        <!--Angular looping starts here from model-->
+                        <div class="module clearfix">
+                            <div class="right">
+                                <img src="../assets/images/rate3.jpg" />
+                                <img src="../assets/images/rate4.png" />
+                                <img src="../assets/images/rate5.png" />
+                            </div>
+                        </div>
+
+                        <div ng-repeat="item in provider">
+
+                            <!--Instance header-->
+                            <div class="clearfix first module">
+                                <div class="left first instance-title" >{{item.category}} </div>
+                            </div>
+
+                            <!--Accordion -->
+                            <div class="clearfix">
+                                <ul class="securityUl">
+
+                                    <li ng-repeat="detail in item.parameters">
+                                        <div class="clearfix securityWrap">
+                                            <div class="left img {{detail.status}}">&nbsp;</div>
+                                            <div class="title">{{detail.name}}</div>
+                                            <div class="right toggle" ng-click="toggle($event)">&nbsp;</div>
+                                        </div>
+                                        <!-- content-->
+                                        <div class="description" style="display:none">
+                                            {{detail.description}}
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--OPERATING-SYSTEM-->
+                    <div class="tab-pane clearfix" id="operating-system">
+
+                        <div class="module clearfix">
+                            <div class="right">
+                                <img src="../assets/images/rate3.jpg" />
+                                <img src="../assets/images/rate4.png" />
+                                <img src="../assets/images/rate5.png" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <ul id="operatingUl">
+
+                                <li ng-repeat="item in operatingInstances">
+                                    <div class="clearfix lightgrey securityWrap">
+                                        <div class="left img {{item.status}}">&nbsp;</div>
+                                        <div class="left col-xs-3" style="padding-top:15px">{{item.ipAddress}}</div>
+                                        <div class="left col-xs-2" style="padding-top:15px">{{item.name}}</div>
+                                        <div class="left img {{item.os}}">&nbsp;</div>
+                                        <div class="right toggle" data-clicked="false" ng-click="toggleOperating($event)">&nbsp;</div>
+                                    </div>
+
+                                    <!-- content div-->
+                                    <div class="operatingDetails" style="display:none">
+                                        <div ng-repeat="item in operatingDetails" >
+                                            <!--Instance header-->
+                                            <div class="clearfix first module">
+                                                <div class="left first instance-title" >{{item.category}} </div>
+                                            </div>
+
+                                            <!--Accordion -->
+                                            <div class="clearfix">
+                                                <ul class="securityUl">
+                                                    <li ng-repeat="detail in item.parameters">
+                                                        <div class="clearfix securityWrap">
+                                                            <div class="left img {{detail.status}}">&nbsp;</div>
+                                                            <div class="title">{{detail.name}}</div>
+                                                            <div class="right toggle" ng-click="toggle($event)">&nbsp;</div>
+                                                        </div>
+                                                        <!-- content-->
+                                                        <div class="description" style="display:none">
+                                                            {{detail.description}}
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <!--SSL-SECURITY-->
+                    <div class="tab-pane clearfix" id="ssl-security">
+
+                        <!-- sslratings boxes & frequencies -->
+                        <div class="module clearfix">
+                            <div class="left" style=""><img src="../../assets/images/lock_sm.png" /> </div>
+                            <div class="right ssl-ratings"><br>
+                                <div class="clearfix box-wrap">
+                                    <div class="frequency">2</div>
+                                    <div class="box aplus left">A+</div>
+                                </div>
+
+                                <div class="clearfix box-wrap">
+                                    <div class="frequency">2</div>
+                                    <div class="box a left">A</div>
+                                </div>
+
+                                <div class="clearfix box-wrap">
+                                    <div class="frequency">2</div>
+                                    <div class="box f left">F</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="clearfix">
+                            <ul id="sslUl">
+                                <!--Angular Repeat-->
+                                <li ng-repeat="item in sslInstances">
+                                    <div class="clearfix lightgrey securityWrap instance">
+                                        <div class="left box {{item.ref}}">{{item.grade}}</div>
+                                        <div class="left col-xs-3 pad-top-15">{{item.name}}</div>
+                                        <div class="right toggle" data-serverId="{{item.serverId}}" data-serverName="{{item.name}}" data-clicked="false" ng-click="toggleSSL($event)">&nbsp;</div>
+                                    </div>
+
+                                    <!--content Details-->
+                                    <div class="sslDetails clearfix" style="display: none;" id="sslDetails{{item.serverId}}">
+
+                                        <div class="instance">
+                                            <div class="box {{sslDetailInstances.ref}} big">{{grade}}</div>
+                                            <hr/>
+                                        </div>
+
+
+                                        <div class="more-info-wrap text-right">
+                                            <btn id="moreInfo" class="btn btn-primary" data-serverId="" ng-click="sslModal($event)">Click for More Info</btn>
+                                        </div>
+
+                                        <!--Angular repeat banner -->
+                                        <div class="ssl-banner" ng-repeat="banner in banners">{{banner.label}}</div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--MODAL-->
+    <div class="modal fade" id="myModal" tabindex="50" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="securityCtrl" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" >Service Security (SSL) > {{serverName}}</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div>
+                        <h3>{{authLabel}}</h3>
+                        <hr/>
+                    </div>
+
+                    <!--Angular Data-Binding-Repeat Authentication-->
+                    <div>
+                        <table id="authTbl" width="100%" border="1">
+                            <tbody>
+                                <tr>
+                                    <td><img src="../../assets/images/ser_ky.png"/></td>
+                                    <td colspan="2"><strong>{{keycertName}}</strong></td>
+                                </tr>
+                                <tr ng-repeat="info in infos">
+                                    <td></td>
+                                    <td>{{info.attribute}}</td>
+                                    <td>{{info.value}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <!--Additional Certificate (if supplied) -->
+                    <div>
+                        <table id="addTbl" width="100%" border="1">
+                            <tbody>
+                            <tr>
+                                <td><img src="../../assets/images/cer_ad.png"/></td>
+                                <td colspan="2"><strong>{{addName}}</strong></td>
+                            </tr>
+                            <tr ng-repeat="info in addInfos">
+                                <td>&nbsp;</td>
+                                <td>{{info.attribute}}</td>
+                                <td>{{info.value}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--Nested Looping for certs-->
+                    <div ng-repeat ="cert in addCerts">
+                        <table id="certTbl" border="1">
+                            <tbody>
+                            <tr >
+                                <td>&nbsp;</td>
+                                <td colspan="2">{{cert.name}}</td>
+                            </tr>
+                            <tr ng-repeat ="certInfo in cert.info">
+                                <td>&nbsp;</td>
+                                <td>{{certInfo.attribute}}</td>
+                                <td>{{certInfo.value}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <br/>
+
+                    <!--Authentication Certpath  -->
+                    <div>
+                        <table id="authcertpathTbl" border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td><img src="../../assets/images/pro_num.png"/></td>
+                                <td colspan="3" style="padding:15px 5px 10px"><strong>{{certpathName}}</strong></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div ng-repeat ="item in certpathInfos">
+                        <table id="certpathTbl" width="100%" border="1">
+                            <tbody>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td colspan="3"><strong>{{item.name}}</strong></td>
+                                </tr>
+                                <tr ng-repeat="detail in item.info">
+                                    <td>&nbsp;</td>
+                                    <td style="padding: 2px 4px">{{detail.id}}</td>
+                                    <td>{{detail.where}}</td>
+                                    <td>{{detail.fingerprint}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!--Configuration Label-->
+                    <div>
+                        <h3>{{configLabel}}</h3>
+                        <hr/>
+                    </div>
+
+                    <!--Config Protocol  -->
+                    <div>
+                        <table id="configprotoclTbl" border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td><img src="../../assets/images/ser_ky.png"/></td>
+                                <td colspan="3"><strong>{{configProtocolLabel}}</strong></td>
+                            </tr>
+                            <tr ng-repeat="item in configProtocolInfo">
+                                <td>&nbsp;</td>
+                                <td>{{item.attribute}}</td>
+                                <td class="text-right">{{item.value}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <!--Config Ciphers  -->
+                    <div>
+                        <table id="configCiphersTbl" border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td><img src="../../assets/images/Cipr_sui.png"/></td>
+                                <td colspan="3"><strong>{{configCiphersLabel}}</strong></td>
+                            </tr>
+                            <tr ng-repeat="item in configCiphersInfo">
+                                <td>&nbsp;</td>
+                                <td>{{item.attribute}}</td>
+                                <td class="text-right">{{item.value}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <!--Config Details  -->
+                    <div>
+                        <table id="configDetailsTbl" border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td><img src="../../assets/images/pro_det.png"/></td>
+                                <td colspan="3"><strong>{{configDetailslabel}}</strong></td>
+                            </tr>
+                            <tr ng-repeat="item in configDetailsInfo">
+                                <td>&nbsp;</td>
+                                <td>{{item.attribute}}</td>
+                                <td class="text-right">{{item.value}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <!--Config Misc  -->
+                    <div>
+                        <table id="configMiscTbl" border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td><img src="../../assets/images/misc_01.png"/></td>
+                                <td colspan="3"><strong>{{configMiscLabel}}</strong></td>
+                            </tr>
+                            <tr ng-repeat="item in configMiscInfo">
+                                <td>&nbsp;</td>
+                                <td>{{item.attribute}}</td>
+                                <td class="text-right">{{item.value}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <!--End Angular Data-Binding-Repeat-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL-->
+
+    <!-- Footer -->
+    <div id="footer-crumbs" class="clearfix">
+        <div class="txt">&copy; 2015 UST Global</div>
+    </div>
+</form>

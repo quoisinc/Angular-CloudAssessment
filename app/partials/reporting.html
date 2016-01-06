@@ -1,0 +1,270 @@
+<form id="reportingForm clearfix">
+    <div class="reporting-wrap clearfix ">
+
+        <!--Header-->
+        <div class="hdr clearfix">
+            <!--Cloud-->
+            <div class="logo-wrap">
+                <img src="assets/images/cl_icon2.png"  alt="UST Cloud Service" /> UST Cloud Services
+            </div>
+
+            <!--Drop down-->
+            <div class="user-wrap">
+                <!--<select class="selectpicker">
+                    <option data-icon="glyphicon-heart">{{userFullName}}</option>
+                </select>-->
+                <!-- <ul>
+                     <li>
+                         <div id="user-login" class="clearfix">
+                             <div class="left">{{userFullName}}</div>
+                             <div class="right carat">&nbsp;</div>
+                         </div>
+                     </li>
+                 </ul>-->
+
+                <!-- NEW SELECT-->
+                <div class="btn-group bootstrap-select">
+                    <button id="newuser-login" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Username" aria-expanded="false">
+                           <span class="filter-option pull-left">
+                               <i class="glyphicon glyphicon-user select-blue"></i>&nbsp;{{userFullName}}
+                           </span>&nbsp;
+                        <span class="caret"></span>
+                    </button>
+
+                    <div class="dropdown-menu open" style="max-height: 815px; overflow: hidden; min-height: 0px;">
+                        <ul class="dropdown-menu inner" role="menu" style="max-height: 803px; overflow-y: auto; min-height: 0px;">
+
+                            <li data-original-index="0" class="selected">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;{{userFullName}}</span>
+                                    <span class="glyphicon glyphicon-user pull-left"></span>
+                                </a>
+                            </li>
+
+                            <li data-original-index="1">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;Settings</span>
+                                    <span class="glyphicon glyphicon-cog pull-left"></span>
+                                </a>
+                            </li>
+
+                            <li data-original-index="2">
+                                <a tabindex="0" class="">
+                                    <span class="text">&nbsp;Logout</span>
+                                    <span class="glyphicon glyphicon-log-out pull-left"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END SELECT-->
+
+            </div>
+        </div>
+
+        <!--Sub Menu-->
+        <div class="sub-menu">
+
+            <ul class="ust-nav" style="list-style-type: none">
+                <li class="navItem">
+                    <div class="clearfix">
+                        <div class="assessment left" ng-click="navigate($event)">
+                            <span class="affixer"><img src="assets/images/cidM_off.png" /> </span>
+                            <span>Cloud Maturity Assessment</span>
+                        </div>
+                        <div class="img right"><img src="assets/images/menu_arrwD.png" /></div>
+                    </div>
+
+                    <!--submenu-->
+                    <ul class="subNav">
+                        <!--<li>
+                            <div class="assessment" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidM_off.png" /> </span>
+                                <span>Cloud Maturity Assessment</span>
+                            </div>
+                        </li>-->
+
+                        <li>
+                            <!--Turbo Dev-->
+                            <div class="turbo" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cldT_off.png" /></span>
+                                <span>Turbo DevOps</span>
+                            </div>
+                        </li>
+
+                        <li>
+                           <!--Cyber Defense off-->
+                            <div class="security" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidS_off.png" /></span>
+                                <span>Cyber Defense</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!--Cloud Operations Off-->
+                            <div class="operations" ng-click="navigate($event)">
+                                <span class="affixer"><img src="assets/images/cidO_off.png" /></span>
+                                <span>Cloud Operations</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Title -->
+        <div class="module-title">Reporting</div>
+
+        <!--Chart Cloud Maturity-->
+        <div id="report-graph">
+            <!--Details Section-->
+            <div class="clearfix details-section">
+                <div class="marg-bottom-50">
+                    <table>
+                        <tbody>
+                        <!--Cloud Maturity Score-->
+                        <tr>
+                            <td nowrap="">
+                                <div class="score">
+                                    <span class="font16">Cloud maturity score:</span> <span class="font24">{{biScore}}</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!--Bi text-->
+                        <tr>
+                            <td class="" nowrap>
+                                <div class="bi-txt">
+                                    <span class="font16">{{className}}:</span> <span class="bi font24">{{bi}} but Intuitive</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!--Bi Details-->
+                        <tr>
+                            <td>
+                                <p class=" font20 bi-details">{{biDetails}}</p>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <br/>
+            <table class="clearfix col-xs-12">
+                <tbody>
+                    <tr>
+                        <td class="col-xs-6">
+                            <!-- Radar Chart Section-->
+                            <div class="chart-container"></div>
+                        </td>
+                        <td>
+                            <div class="view-graph" >
+                                <button class="btn list-app" ng-click="allAppModal($event)">All Applications</button>
+                            </div>
+                            <div class="pull-left" id="graph-review" style="z-index:1;padding-top:15%;padding-right:10px">
+                                <img src="../../assets/images/reporting_side.png" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+           <!-- <div class="view-graphx">
+                <span class="list-app" ng-click="allAppModal($event)">All Applications</span>
+            </div>-->
+
+
+        </div>
+
+
+
+        <!--App Assessment Quadrant-->
+        <div id="report-quadrant" class="col-xs-6">
+            <div class="clearfix">
+
+                <div class="marg-bottom-50">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="report-recommendation">Recommendation:</td>
+                            <td class="text-right">
+                                <div>
+                                    <h2  class="report-readiness">{{readiness}}</h2>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="popover report right">
+                                    <div class="arrow"></div>
+                                    <h3 class="popover-title" id="popover-right">
+                                        <a href="#popover-right" class="anchorjs-link"><span class="anchorjs-icon"></span></a>
+                                    </h3>
+                                    <div class="popover-content">
+                                        <p>{{readinessDetails}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+            <div>
+                <table border="1" id="assessmentTbl">
+                    <tbody>
+                    <tr>
+                        <td>Replace</td>
+                        <td class="migrate">{{readiness}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Retain</td>
+                        <td>Business Case</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <!--MODAL-->
+    <div class="modal fade" id="myModal" tabindex="50" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="securityCtrl" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" >All Applications</h4>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-body">
+                    <div class="img-placeholder">
+                        <img src="../../assets/images/graph-01.png" />
+                    </div>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MODAL-->
+
+    <!-- Footer -->
+    <div id="footer-crumbs" class="clearfix" style="margin-top:10px">
+        <div class="txt">&copy; 2015 UST Global</div>
+    </div>
+</form>
+

@@ -1,0 +1,44 @@
+{
+  "Response": {
+    "compute": [
+      {
+        "id": 1,
+        "name": "Web-IIS-1",
+        "ipAddress": “XXX.XX.1.xxxx”,
+        "state": "Running",
+        "ref": "Normal",
+        "status": "Operating normally"
+      },
+      {
+        "id": 2,
+        "name": "Web-IIS-2",
+        "ipAddress": "XXX.XX.1.xxxx”,
+        "state": "Running",
+        "ref": "Anomaly",
+        "status": "Anomaly detected"
+      },
+      {
+        "id": 3,
+        "name": "App-Net-1",
+        "ipAddress": "XXX.XX.1.xxxx”,
+        "state": "Running",
+        "ref": "Normal",
+        "status": "Operating normally"
+      },
+      {
+        "id": 4,
+        "name": "App-Net-1",
+        "ipAddress": "XXX.XX.1.xxxx”,
+        "state": "Stopped"
+      },
+      {
+        "id": 5,
+        "name": "DB-SQL-1",
+        "ipAddress": "XXX.XX.1.xxxx”,
+        "state": "Running",
+        "ref": "Normal",
+        "status": "Operating normally"
+      }
+    ]
+  }
+}

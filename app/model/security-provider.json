@@ -1,0 +1,93 @@
+{"Response":
+  [
+    {
+    "categoryId": 1,
+    "category": "Identity and Access",
+    "parameters": [
+      {
+        "id": 1,
+        "name": "Directory Service Usage",
+        "description": "The AWS Directory Service helps to connect to your existing on-premises Microsoft Active Directory with AD Connector, or set up and operate a new directory in the AWS cloud with Simple AD. This enables you to seamlessly join Amazon EC2 Windows instances to your domain upon launch, making it easy to deploy and manage Windows workloads in the AWS cloud. Directory users and groups can access the AWS Management Console and AWS applications using their existing credentials.",
+        "status": "normal"
+      },
+      {
+        "id": 2,
+        "name": "Identity and Access Management Usage",
+        "description": "",
+        "status": "warning"
+      },
+      {
+        "id": 3,
+        "name": "CloudTrail Logging",
+        "description": "",
+        "status": "critical"
+      },
+      {
+        "id": 4,
+        "name": "Key Management Service",
+        "description": "",
+        "status": "warning"
+      }
+    ]
+  },
+    {
+    "categoryId": 2,
+    "category": "Network Protection",
+    "parameters": [
+      {
+        "id": 1,
+        "name": "Virtual Private Clouds",
+        "description": "",
+        "status": "normal"
+      },
+      {
+        "id": 2,
+        "name": "Security Groups - Specific Ports Unrestricted",
+        "description": "",
+        "status": "warning"
+      },
+      {
+        "id": 3,
+        "name": "Security Groups - Unrestricted Access",
+        "description": "",
+        "status": "critical"
+      }
+    ]
+  },
+    {
+    "categoryId": 3,
+    "category": "Configuration Management",
+    "parameters": [
+      {
+        "id": 1,
+        "name": "Resource Tagging",
+        "description": "",
+        "status": "normal"
+      },
+      {
+        "id": 2,
+        "name": "Config Service",
+        "description": "",
+        "status": "critical"
+      }
+    ]
+  },
+    {
+      "categoryId": 4,
+      "category": "Monitoring",
+      "parameters": [
+      {
+        "id": 1,
+        "name": "CloudWatch Usage",
+        "description": "",
+        "status": "normal"
+      },
+      {
+        "id": 2,
+        "name": "Trusted Advisor Management",
+        "description": "",
+        "status": "normal"
+      }
+    ]
+  }
+]}

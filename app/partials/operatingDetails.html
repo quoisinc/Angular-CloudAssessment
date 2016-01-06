@@ -1,0 +1,24 @@
+<div ng-repeat="item in operatingDetails" >
+    <!--Instance header-->
+    <div class="clearfix first module">
+        <div class="left first instance-title" >{{item.category}} </div>
+    </div>
+
+    <!--Accordion -->
+    <div class="clearfix">
+        <ul id="securityUl">
+            <li ng-repeat="detail in item.parameters">
+                <div class="clearfix securityWrap">
+                    <div class="left img {{detail.status}}">&nbsp;</div>
+                    <div class="title">{{detail.name}}</div>
+                    <div class="right toggle" ng-click="toggle($event)">&nbsp;</div>
+                </div>
+                <!-- content-->
+                <div class="description" ng-show>
+                    {{detail.description}}
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</div>

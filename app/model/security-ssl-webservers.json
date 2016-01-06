@@ -1,0 +1,35 @@
+{
+  "Response":
+  [
+    {
+      "serverId": 11111,
+      "name":	“xx-xx-xxx.xxxxcorp.com",
+      "grade": "A+",
+      "ref": "aplus"
+    },
+    {
+      "serverId": 11111,
+      "name":	"xx-xx-xxx.xxxxcorp.com",
+      "grade": "A+",
+      "ref": "aplus"
+    },
+    {
+      "serverId": 11111,
+      "name":	"xx-xx-xxx.xxxxcorp.com",
+      "grade": "A",
+      "ref": "a"
+    },
+    {
+      "serverId": 11111,
+      "name":	"xx-xx-xxx.xxxxcorp.com",
+      "grade": "A",
+      "ref": "a"
+    },
+    {
+      "serverId": 11111,
+      "name":	"xx-xx-xxx.xxxxcorp.com",
+      "grade": "F",
+      "ref": "f"
+    }
+  ]
+}

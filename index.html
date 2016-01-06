@@ -1,0 +1,98 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="en" ng-app="UST">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=No">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>UST Global:Cloud Maturity Assessment</title>
+	<link href="assets/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="assets/styles/boilerplate.css" rel="stylesheet" type="text/css">
+	<link href="assets/styles/stylere.css" rel="stylesheet" type="text/css">
+	<link href="vendor/js/core/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="vendor/js/core/bootstrap/bootstrap-select.min.css">
+	<link href="vendor/js/lib/radar-chart.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/styles/app.css" rel="stylesheet" type="text/css">
+	<link href="assets/styles/animate.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+</head>
+<body class="body-init">
+<div class="gridContainer app clearfix">
+	<div id="deviceready" class="fluid" >
+		<div id="section" class="view-frame" ng-view></div>
+
+	</div>
+</div>
+
+<!-- All these core files will be replaced with a concatenated version in the build folder by GRUNT -->
+
+<!-- build:js app/components.min.js >
+<script src="components/angular/angular.js"></script>
+<script src="components/angular/angular-route.js"></script>
+<!-- endbuild -->
+
+<!-- library files-->
+<script src="vendor/js/core/angular/angular.js"></script>
+<script src="vendor/js/core/angular/angular-route.js"></script>
+<script src="vendor/js/core/angular/angular-cookies.js"></script>
+<script src="vendor/js/core/jquery/jquery-2.1.0.min.js"></script>
+<script src="vendor/js/lib/respond.min.js"></script>
+<script src="vendor/js/core/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/js/core/bootstrap/bootstrap-select.min.js"></script>
+<script src="vendor/js/core/bootstrap/bootbox.min.js"></script>
+<script src="vendor/js/lib/moment.js"></script>
+<script src="vendor/js/lib/d3.js"></script>
+<script src="vendor/js/lib/radar-chart.min.js"></script>
+<script src="vendor/js/core/bootstrap/bootbox.min.js"></script>
+<!--
+    These are our dev javascripts. They will be replaced by a minified version in the build folder or we can leave in
+    original source code format. We still need them to be there so the .map file can reference them
+    when debugging in production.
+-->
+
+
+<!-- build:js src/app.js -->
+<script src="app/app.js"></script>
+<!-- endbuild -->
+<!-- build:js src/config/services.js -->
+<script src="app/config/services.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/userLoginCtrl.js -->
+<script src="app/controllers/userLoginCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/assessmentCtrl.js -->
+<script src="app/controllers/assessmentCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/turboCtrl.js -->
+<script src="app/controllers/turboCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/securityCtrl.js -->
+<script src="app/controllers/securityCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/operationsCtrl.js -->
+<script src="app/controllers/operationsCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/reportingCtrl.js -->
+<script src="app/controllers/reportingCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/errCtrl.js -->
+<script src="app/controllers/errCtrl.js"></script>
+<!-- endbuild -->
+<!-- build:js src/controllers/notfoundCtrl.js -->
+<script src="app/controllers/notfoundCtrl.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

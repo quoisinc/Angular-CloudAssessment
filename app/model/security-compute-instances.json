@@ -1,0 +1,60 @@
+{
+  "Response": [
+    {
+      "computeId": 1001,
+      "ipAddress": “xxx.xx.32.22",
+      "name": "beehive",
+      "os": "ubuntu",
+      "status": "critical"
+    },
+    {
+      "computeId": 1002,
+      "ipAddress": "xxx.xx.32.22",
+      "name": "dev-web-01",
+      "os": "redhat",
+      "status": "warning"
+    },
+    {
+      "computeId": 1003,
+      "ipAddress": "xxx.xx.32.22",
+      "name": "dev-web-02",
+      "os": "redhat",
+      "status": "warning"
+    },
+    {
+      "computeId": 1006,
+      "ipAddress": "xxx.xx.32.22",
+      "name": "sf-web-01",
+      "os": "redhat",
+      "status": "normal"
+    },
+    {
+      "computeId": 1007,
+      "ipAddress": "xxx.xx.32.22",
+      "name": "sf-web-02",
+      "os": "redhat",
+      "status": "normal"
+    },
+    {
+      "computeId": 1009,
+      "ipAddress": "xxx.xx.32.22",
+      "name": "jenkins-ci",
+      "os": "ubuntu",
+      "status": "normal"
+    },
+    {
+      "computeId": 2007,
+      "ipAddress": "xxx.xx.32.22,
+      "name": "dev-db-master",
+      "os": "redhat",
+      "status": "normal"
+    },
+    {
+      "computeId": 2011,
+      "ipAddress": "xxx.xx.32.22",
+      "name": "dev-app-01",
+      "os": "redhat",
+      "status": "normal"
+    }
+  ]
+}

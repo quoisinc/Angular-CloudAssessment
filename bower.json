@@ -1,0 +1,9 @@
+{
+  "name": "bower",
+  "version": "0.0.0",
+  "dependencies": {
+	 "jquery": “xxxxxx/xxxxxlobal.git;a=blob_plain;f=js/core/jquery/jquery.1.10.2.min.js"
+  },
+  "devDependencies": {}
+}
+

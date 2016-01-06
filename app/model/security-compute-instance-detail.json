@@ -1,0 +1,96 @@
+{
+  "Response":
+  [
+    {
+      "categoryId": 1,
+      "category": "Identity and Access",
+      "parameters": [
+        {
+          "id": 1,
+          "name": "Non-secure Login Services (ftp, telnet etc.)",
+          "description": "",
+          "status": "normal"
+        },
+        {
+          "id": 2,
+          "name": "Inactive User Accounts",
+          "description": "",
+          "status": "warning"
+        },
+        {
+          "id": 3,
+          "name": "Password Policy",
+          "description": "",
+          "status": "critical"
+        },
+        {
+          "id": 4,
+          "name": "SSH Configuration",
+          "description": "",
+          "status": "warning"
+        }
+      ]
+    },
+    {
+      "categoryId": 2,
+      "category": "Network Protection",
+      "parameters": [
+        {
+          "id": 1,
+          "name": "Firewall Services",
+          "description": "",
+          "status": "normal"
+        },
+        {
+          "id": 2,
+          "name": "Firewall Rules - Specific Ports Unrestricted",
+          "description": "",
+          "status": "warning"
+        },
+        {
+          "id": 3,
+          "name": "Firewall Rules - Unrestricted Access",
+          "description": "",
+          "status": "critical"
+        }
+      ]
+    },
+    {
+      "categoryId": 3,
+      "category": "Monitoring",
+      "parameters": [
+        {
+          "id": 1,
+          "name": "Antivirus",
+          "description": "",
+          "status": "normal"
+        },
+        {
+          "id": 2,
+          "name": "Logging and Auditing",
+          "description": "",
+          "status": "normal"
+        }
+      ]
+    },
+    {
+      "categoryId": 4,
+      "category": "Package Management",
+      "parameters": [
+        {
+          "id": 1,
+          "name": "Critical Updates",
+          "description": "",
+          "status": "normal"
+        },
+        {
+          "id": 2,
+          "name": "Optional Updates",
+          "description": "",
+          "status": "warning"
+        }
+      ]
+    }
+  ]
+
+}

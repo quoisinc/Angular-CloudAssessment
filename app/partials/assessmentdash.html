@@ -1,0 +1,142 @@
+<form id="assessmentForm">
+       <div class="assessmentmenu-wrap bounceIn">
+
+           <div class="hdr clearfix">
+               <!--CLoud-->
+               <div class="logo-wrap">
+                   <img src="assets/images/cl_icon2.png"  alt="UST Cloud Service" /> UST Cloud Services
+               </div>
+
+               <!--Drop down-->
+               <div class="user-wrap">
+                   <!--<select class="selectpicker">
+                       <option data-icon="glyphicon-heart">{{userFullName}}</option>
+                   </select>-->
+                   <!-- <ul>
+                        <li>
+                            <div id="user-login" class="clearfix">
+                                <div class="left">{{userFullName}}</div>
+                                <div class="right carat">&nbsp;</div>
+                            </div>
+                        </li>
+                    </ul>-->
+
+                   <!-- NEW SELECT-->
+                   <div class="btn-group bootstrap-select">
+                       <button id="newuser-login" type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" title="Username" aria-expanded="false">
+                           <span class="filter-option pull-left">
+                               <i class="glyphicon glyphicon-user select-blue"></i>&nbsp;{{userFullName}}
+                           </span>&nbsp;
+                           <span class="caret"></span>
+                       </button>
+
+                       <div class="dropdown-menu open" style="max-height: 815px; overflow: hidden; min-height: 0px;">
+                           <ul class="dropdown-menu inner" role="menu" style="max-height: 803px; overflow-y: auto; min-height: 0px;">
+
+                               <li data-original-index="0" class="selected">
+                                   <a tabindex="0" class="">
+                                       <span class="text">&nbsp;{{userFullName}}</span>
+                                       <span class="glyphicon glyphicon-user pull-left"></span>
+                                   </a>
+                               </li>
+
+                               <li data-original-index="1">
+                                   <a tabindex="0" class="">
+                                       <span class="text">&nbsp;Settings</span>
+                                       <span class="glyphicon glyphicon-cog pull-left"></span>
+                                   </a>
+                               </li>
+
+                               <li data-original-index="2">
+                                   <a tabindex="0" class="">
+                                       <span class="text">&nbsp;Logout</span>
+                                       <span class="glyphicon glyphicon-log-out pull-left"></span>
+                                   </a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <!-- END SELECT-->
+
+               </div>
+
+           </div>
+
+           <!--Sub Menu-->
+           <div class="sub-menu">
+
+               <ul class="ust-nav" style="list-style-type: none">
+                   <li class="navItem">
+                       <div class="clearfix">
+                           <div class="maturity left">
+                               <span class="affixer"><img src="assets/images/cidM_on.png" /></span>
+                               <span>Cloud Maturity Assessment</span>
+                           </div>
+                           <div class="img right"><img src="assets/images/menu_arrwD.png" /></div>
+
+                       </div>
+                       <!--submenu-->
+                       <ul class="subNav">
+                           <li>
+                               <!--Turbo Dev off-->
+                               <div class="turbo" ng-click="navigate($event)">
+                                   <span class="affixer"><img src="assets/images/cldT_off.png" /></span>
+                                   <span>Turbo DevOps</span>
+                               </div>
+                           </li>
+
+                           <li>
+                               <!--Cyber Defense off-->
+                               <div class="security" ng-click="navigate($event)">
+                                   <span class="affixer"><img src="assets/images/cidS_off.png" /></span>
+                                   <span>Cyber Defense</span>
+                               </div>
+                           </li>
+
+                           <li>
+                               <!--Cloud Operations Off-->
+                               <div class="operations" ng-click="navigate($event)">
+                                   <span class="affixer"><img src="assets/images/cidO_off.png" /></span>
+                                   <span>Cloud Operations</span>
+                               </div>
+                           </li>
+
+                       </ul>
+                   </li>
+               </ul>
+           </div>
+
+
+           <!-- Assessment Wrap -->
+           <div class="menu" style="margin:15% 15%">
+
+               <div align="center">
+                    <button data-info="start" class="btn btn-primary" ng-click="navigateAssessment($event)">Start a New Assessment</button>
+              </div>
+
+               <div align="center">
+                   <button data-info="review" data-id="application" class="btn btn-primary" ng-click="navigateAssessment($event)">
+                       View Completed Application Migration Assessments</button>
+               </div>
+
+               <div align="center">
+                   <button data-info="review" data-id="cloud" class="btn btn-primary" ng-click="navigateAssessment($event)">
+                       View Completed Cloud Maturity Assessments</button>
+               </div>
+
+               <div align="center">
+                   <button data-info="consolidate" class="btn btn-primary" ng-click="navigateAssessment($event)">Consolidated Application Assessment Report</button>
+               </div>
+
+           </div>
+       </div>
+
+        <!-- Footer -->
+        <div id="footer-crumbs" class="clearfix">
+            <div class="txt">Copyright@UST Global 2015</div>
+        </div>
+</form>
+
+<div class="spinner" ng-show="loading">
+    <img src="assets/images/ajax-loader.gif" class="ajax-loader"/>
+</div>

@@ -1,0 +1,14 @@
+{
+  "anomalies": [
+    {
+      "anomalyId": 242,
+      "type": "Brute-force login attempts",
+      "when": “xxx 11, 2015 06:40:48",
+      "detectedAt": "Jan 11, 2015 07:11:15",
+      "initiators": “xx.xx.xx.xx”,
+      "logfile": “/xxx-xxxx/cloud-x/2015/xx/access.log",
+      "lines": "79-203",
+      "server":"Web-IIS-2(xx.xx.xxx”
+    }
+  ]
+}

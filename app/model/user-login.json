@@ -1,0 +1,12 @@
+{
+  "Response":
+  {
+    "id": 2,
+    "firstName": "Test",
+    "middleName": "",
+    "lastName": "User",
+    "fullName": "Test User",
+    "email": "Test.User@xxx-xxxxxx.com",
+    "login": "Test"
+  }
+}
